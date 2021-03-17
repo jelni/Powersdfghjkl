@@ -5,7 +5,8 @@ module.exports = class Sdfghjkl extends Plugin {
 	startPlugin() {
 		powercord.api.commands.registerCommand({
 			command: 'sdfghjkl',
-			description: 'UEYWASRFGWEYUJSGTFUWJKARFHDUKQWGFCUKWAJEGFDUKQWAHDKQWAHGKAQWDHUAWHAWHJKDHKfawGHQKJRFDwahKJIDRFQjkfGHASEkjFKJAWHJHSGAEDHFDjqkashkfvahkadfhjsd',
+			description:
+				'UEYWASRFGWEYUJSGTFUWJKARFHDUKQWGFCUKWAJEGFDUKQWAHDKQWAHGKAQWDHUAWHAWHJKDHKfawGHQKJRFDwahKJIDRFQjkfGHASEkjFKJAWHJHSGAEDHFDjqkashkfvahkadfhjsd',
 			usage: '{c} [length]',
 			executor: (args) => this.sdfghjkl(args)
 		});
@@ -23,7 +24,7 @@ module.exports = class Sdfghjkl extends Plugin {
 		if (args.length >= 1) {
 			length = parseInt(args[0]);
 			if (isNaN(length)) return;
-			Math.min(Math.max(length, 1), 2000);
+			length = Math.max(Math.min(length, 2000), 1);
 		} else {
 			length = Math.floor(Math.random() * 51 + 50);
 		}
